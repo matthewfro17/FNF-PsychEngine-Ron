@@ -388,6 +388,8 @@ class PlayState extends MusicBeatState
 			case 'school': new states.stages.School(); //Week 6 - Senpai, Roses
 			case 'schoolEvil': new states.stages.SchoolEvil(); //Week 6 - Thorns
 			case 'tank': new states.stages.Tank(); //Week 7 - Ugh, Guns, Stress
+			case 'ronshit': if (songLowercase == 'Ayo') {new states.stages.mad();} else if {songLowercase == 'Bloodshed'} {new states.stages.hell();} else if {songLowercase == 'Ron'} {new states.stages.happy();} else if {songLowercase == 'Holy-Shit-Dave-Fnf'} {new states.stages.daveHouse();} else if {songLowercase == '":"Withered-Tweaked'} {new states.stages.withered();} else if {songLowercase == 'bijuu'} {new states.stages.happy();} else if {songLowercase == 'bloodbath'} {new states.stages.hell();}
+
 		}
 
 		if(isPixelStage) {
@@ -1273,8 +1275,50 @@ class PlayState extends MusicBeatState
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
 				else
 					oldNote = null;
-
+				if (gottaHitNote == false) {
+					skin = 'ronsip';
+					switch (dad.curCharacter)
+					{
+						case 'douyhe':
+							skin = 'NOTE_assets';
+						case 'hellron':
+							skin = 'ronhell';
+						case 'hacker':
+							skin = 'ronhell';
+						case 'ateloron':
+							skin = 'ronhell';
+						case 'ron-usb':
+							skin = 'ronhell';
+						case 'demonron':
+							skin = 'demonsip';
+						case 'ronb':
+							skin = 'evik';
+						case 'ronmad-b':
+							skin = 'evik';
+						case 'ronangry-b':
+							skin = 'evik';
+						case 'hellron-2':
+							skin = 'bhell';
+						case 'ateloron-b':
+							skin = 'bhell';
+						case 'ron-usb-b':
+							skin = 'bhell';
+						case 'dave':
+							skin = 'NOTEold_assets';
+						case 'bambi':
+							skin = 'NOTEold_assets';
+						case 'ronDave':
+							skin = 'NOTEold_assets';
+					}
+				}
+				else 
+				{
+					skin = 'NOTE_assets';
+					if (dad.curCharacter == 'dave')
+						skin = 'ronsip';
+				}
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
+				var skin = 'NOTE_assets';
 				swagNote.mustPress = gottaHitNote;
 				swagNote.sustainLength = songNotes[2];
 				swagNote.gfNote = (section.gfSection && (songNotes[1]<4));
