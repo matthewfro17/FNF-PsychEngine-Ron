@@ -2,9 +2,11 @@ package states.stages;
 
 import states.stages.objects.*;
 import objects.Character;
+import flixel.addons.effects.chainable.FlxGlitchEffect;
 
 class mad extends BaseStage
 {
+  var glitchEffect:FlxGlitchEffect;
 	override function create()
 	{
 				defaultCamZoom = 0.9;
@@ -28,9 +30,9 @@ class mad extends BaseStage
 				clouds.antialiasing = true;
 				clouds.scrollFactor.set(0.2, 0.2);
 				add(clouds);
-				/*var glitchEffect = new FlxGlitchEffect(8,10,0.4,FlxGlitchDirection.HORIZONTAL);
+				var glitchEffect = new FlxGlitchEffect(8,10,0.4,FlxGlitchDirection.HORIZONTAL);
 				var glitchSprite = new FlxEffectSprite(bg, [glitchEffect]);
-				add(glitchSprite);*/
+				add(glitchSprite);
 				
 				var ground:FlxSprite = new FlxSprite(-537, -250).loadGraphic(Paths.image('updateron/bg/pissedRon_ground'));
 				ground.updateHitbox();
