@@ -3,7 +3,7 @@ package states.stages;
 import states.stages.objects.*;
 import objects.Character;
 
-class StageWeek1 extends BaseStage
+class mad extends BaseStage
 {
 	override function create()
 	{
