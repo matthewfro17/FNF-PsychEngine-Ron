@@ -198,6 +198,15 @@ class Note extends FlxSprite
 
 	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?createdFrom:Dynamic = null)
 	{
+		if (skin == null)
+			skin = 'ronsip';
+			
+		if (noteType == 1)
+		{
+			this.noteType = noteType;
+			skin = 'hurt';
+		}
+
 		super();
 
 		antialiasing = ClientPrefs.data.antialiasing;
