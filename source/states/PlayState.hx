@@ -388,7 +388,7 @@ class PlayState extends MusicBeatState
 			case 'school': new states.stages.School(); //Week 6 - Senpai, Roses
 			case 'schoolEvil': new states.stages.SchoolEvil(); //Week 6 - Thorns
 			case 'tank': new states.stages.Tank(); //Week 7 - Ugh, Guns, Stress
-			case 'ronshit': if (songLowercase == 'Ayo') {new states.stages.mad();} else if {songLowercase == 'Bloodshed'} {new states.stages.hell();} else if {songLowercase == 'Ron'} {new states.stages.happy();} else if {songLowercase == 'Holy-Shit-Dave-Fnf'} {new states.stages.daveHouse();} else if {songLowercase == '":"Withered-Tweaked'} {new states.stages.withered();} else if {songLowercase == 'bijuu'} {new states.stages.happy();} else if {songLowercase == 'bloodbath'} {new states.stages.hell();}
+			case 'ronshit': if (songLowercase == 'wasted') {new states.stages.mad();} else if (songLowercase == 'Ayo') {new states.stages.mad();} else if {songLowercase == 'Bloodshed'} {new states.stages.hell();}  else if {songLowercase == 'Bloodshed-b'} {new states.stages.hell();} else if {songLowercase == 'Ron'} {new states.stages.happy();} else if {songLowercase == 'Holy-Shit-Dave-Fnf'} {new states.stages.daveHouse();} else if {songLowercase == '":"Withered-Tweaked'} {new states.stages.withered();} else if {songLowercase == 'bijuu'} {new states.stages.happy();} else if {songLowercase == 'bloodbath'} {new states.stages.hell();}
 
 		}
 
