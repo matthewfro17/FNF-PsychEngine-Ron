@@ -33,8 +33,6 @@ typedef NoteSplashData = {
 
 class Note extends FlxSprite
 {
-        var skin = 'NOTE_assets';
-
 	public var extraData:Map<String, Dynamic> = new Map<String, Dynamic>();
 
 	public var strumTime:Float = 0;
@@ -128,7 +126,7 @@ class Note extends FlxSprite
 
 	public function resizeByRatio(ratio:Float) //haha funny twitter shit
 	{
-		if(isSustainNote && !animation.curAnim.name.endsWith('end'))
+		if(isSustainNote && animation.curAnim != null && !animation.curAnim.name.endsWith('end'))
 		{
 			scale.y *= ratio;
 			updateHitbox();
@@ -200,15 +198,6 @@ class Note extends FlxSprite
 
 	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?createdFrom:Dynamic = null)
 	{
-		if (skin == null)
-			skin = 'ronsip';
-			
-		if (noteType == 1)
-		{
-			this.noteType = noteType;
-			skin = 'hurt';
-		}
-
 		super();
 
 		antialiasing = ClientPrefs.data.antialiasing;
