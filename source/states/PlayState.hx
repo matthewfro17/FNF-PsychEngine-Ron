@@ -1283,6 +1283,12 @@ class PlayState extends MusicBeatState
 							skin = 'NOTE_assets';
 						case 'hellron':
 							skin = 'ronhell';
+						case 'ron':
+							skin = 'ronsip';
+						case 'ron-angry':
+							skin = 'ronsip';
+						case 'ron-mad':
+							skin = 'ronsip';
 						case 'hacker':
 							skin = 'ronhell';
 						case 'ateloron':
