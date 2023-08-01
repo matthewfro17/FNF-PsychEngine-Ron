@@ -33,6 +33,8 @@ typedef NoteSplashData = {
 
 class Note extends FlxSprite
 {
+        var skin = 'NOTE_assets';
+
 	public var extraData:Map<String, Dynamic> = new Map<String, Dynamic>();
 
 	public var strumTime:Float = 0;

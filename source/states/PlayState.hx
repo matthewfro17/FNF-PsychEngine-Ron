@@ -75,6 +75,8 @@ import psychlua.HScript;
 
 class PlayState extends MusicBeatState
 {
+        var skin = 'NOTE_assets';
+
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
@@ -388,8 +390,6 @@ class PlayState extends MusicBeatState
 			case 'school': new states.stages.School(); //Week 6 - Senpai, Roses
 			case 'schoolEvil': new states.stages.SchoolEvil(); //Week 6 - Thorns
 			case 'tank': new states.stages.Tank(); //Week 7 - Ugh, Guns, Stress
-			case 'ronshit': if (songLowercase == 'wasted') {new states.stages.mad();} else if (songLowercase == 'Ayo') {new states.stages.mad();} else if {songLowercase == 'Bloodshed'} {new states.stages.hell();}  else if {songLowercase == 'Bloodshed-b'} {new states.stages.hell();} else if {songLowercase == 'Ron'} {new states.stages.happy();} else if {songLowercase == 'Holy-Shit-Dave-Fnf'} {new states.stages.daveHouse();} else if {songLowercase == 'Withered-Tweaked'} {new states.stages.withered();} else if {songLowercase == 'bijuu'} {new states.stages.happy();} else if {songLowercase == 'Pretty-Wacky'} {new states.stages.happy();}else if {songLowercase == 'bloodbath'} {new states.stages.hell();}
-
 		}
 
 		if(isPixelStage) {
@@ -1318,7 +1318,6 @@ class PlayState extends MusicBeatState
 						skin = 'ronsip';
 				}
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
-				var skin = 'NOTE_assets';
 				swagNote.mustPress = gottaHitNote;
 				swagNote.sustainLength = songNotes[2];
 				swagNote.gfNote = (section.gfSection && (songNotes[1]<4));
